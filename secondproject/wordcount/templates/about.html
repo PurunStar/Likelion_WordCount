@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Word Counting</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+    </head>
+    
+	<body>
+			<section id="banner">
+				<div class="inner split">
+					<section>
+						<h2>Welcome to My WebPage!</h2>
+					</section>
+					<section>
+						<p> 이 웹페이지는 워드카운트를 가능하게 해줍니다.<br>공백을 기준으로 문장을 단어로 구분해줍니다.</p>
+						<ul class="actions">
+							<li><a href="{%url 'home' %}" class="button special">START</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+			<section id="contact" class="wrapper">
+				<div class="inner split">
+					<section>
+						<h2>궁금하신게 있습니까?</h2>
+						<p>궁금하면 궁금한걸 해결해야죠<br>메일 보내세요</p>
+						<form action="#" class="alt" method="POST">
+							<div class="row uniform">
+								<div class="6u 12u$(xsmall)">
+									<input name="name" placeholder="Name" type="text">
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input name="email" placeholder="Email" type="email">
+								</div>
+								<div class="12u$">
+									<textarea name="message" placeholder="Message" rows="4"></textarea>
+ 								</div>
+ 							</div>
+ 							<ul class="actions">
+ 								<li><input class="alt" value="Send message" type="submit"></li>
+ 							</ul>
+ 						</form>
+					</section>
+					<section>
+						<ul class="contact">
+                            <br><br><br><br><br>
+							<li class="fa-envelope"><a href="#">Mail  :  maxlevel1324@naver.com</a></li>
+							<li class="fa-home">사는곳  :  광주광역시 어딘가...<br/>번호  :  010-5571-2090</li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+			<footer id="footer">
+				<div class="copyright">
+					&copy; 멋쟁이 사자처럼 
+			</footer>
+	</body>
+</html>

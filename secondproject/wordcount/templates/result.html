@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+
+<head>
+  <title>Word Counting</title>
+  <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}"/>
+</head>
+
+<body>
+<div class = "about">
+    <a href="{%url 'about'%}">ABOUT</a>
+</div>
+    
+<div class="count">
+    <h1>당신이 입력한 문장은 <strong>{{total}}</strong>개로 이루어져 있습니다</h1>
+</div>
+
+  <br><br><br>
+
+<div class = "wordcounting">
+        <br>
+        <h2>입력한 텍스트</h2>
+        <p class="m">{{full}}</p>
+        <h2> 단어 갯수</h2>
+        {% for word, howmany in dictionary%}
+        <p class="m">{{word}} : {{howmany}}</p>
+        
+        {%endfor%}
+        <br><br><br>
+        <a href = "{%url 'home'%}"><p class="l">다시하기</p></a>
+
+</div>
+</body>
+
+<footer>
+    <h3>Thank you for using my WebSite!</h3>
+</footer>
+
+</html>

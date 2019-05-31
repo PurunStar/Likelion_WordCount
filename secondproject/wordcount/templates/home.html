@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+
+<head>
+  <title>Word Counting</title>
+  <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+</head>
+
+<body>
+<div class = "about">
+    <a href="{%url 'about'%}">ABOUT</a>
+</div>
+    
+<div class="welcome">
+    <h1><strong>Word Counting!</strong></h1>
+    <p><string>문장을 입력하세요!</string></p>
+</div>
+
+  <br><br><br>
+
+<div class="text">
+    <form action="{%url 'result'%}">
+        <textarea cols="100" rows="20" name="fulltext" autofocus></textarea>
+        <br><br>
+        <input class="CountButton" type="submit" value="Count!">
+    </form>
+</div>
+</body>
+
+<footer>
+    <h3>Thank you for using my WebSite!</h3>
+</footer>
+
+</html>
